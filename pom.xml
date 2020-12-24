@@ -9,11 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.userdatatables</groupId>
-	<artifactId>demoApp</artifactId>
+	<artifactId>onlineProjects</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
-	<name>demoApp</name>
-	<description>Demo project for Spring Boot</description>
+	<packaging>jar</packaging>
+	<name>onlineProjects</name>
+	<description>Online Projects Application</description>
 
 	<properties>
 		<java.version>1.8</java.version>
