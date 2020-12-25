@@ -3,30 +3,29 @@ package com.example.modal;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 import org.springframework.http.HttpStatus;
 
 @Entity
-@Table(name ="UserTable")
 public class UserModal {
 
 	@Column(name = "User_Name")
 	private String userName;
 	
-	@Id @Column(name = "Email")
+	@Id
+	@Column(name = "user_Email")
 	private String userEmail;
 	
-	@Id 
-	@Column(name = "User_Id")
-	@GeneratedValue
+	@Column(name = "user_Id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String userId;
 	
 	@Column(name = "Encrypted_Password")
 	private String password;
 	
-	@Column(name = "EmailAddress")
+	@Column(name = "user_Address")
 	private String userAddress;
 	
 	private HttpStatus statuscode;
