@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.UniqueConstraint;
 
 import org.springframework.http.HttpStatus;
 
@@ -14,12 +15,13 @@ public class UserModal {
 	@Column(name = "User_Name")
 	private String userName;
 	
-	@Id
-	@Column(name = "user_Email")
+	
+	@Column(name = "user_Email",unique = true)
 	private String userEmail;
 	
+	@Id
 	@Column(name = "user_Id")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY )
 	private String userId;
 	
 	@Column(name = "Encrypted_Password")
